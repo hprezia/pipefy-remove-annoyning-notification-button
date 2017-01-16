@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Hide pipefy notification button",
+  "short_name": "Hide notification",
+  "description": "Extension to hide annoying notification button",
+  "version": "0.0.1",
+
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://app.pipefy.com/*",
+        "*://beta.pipefy.com/*"
+      ],
+      "js": [ "hide_annoying_button.js" ],
+      "run_at": "document_start"
+    }
+  ]
+}
